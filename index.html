@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="A non-generative title constraint deck for focusing ideas through authored prompts and examples.">
+  <title>Title Constraint Deck</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <main class="deck" id="deck" tabindex="0">
+    <section class="card" aria-label="Title constraint">
+      <div class="category" id="category"></div>
+
+      <h1 class="prompt" id="prompt" aria-live="polite"></h1>
+
+      <div class="examples" id="examples" aria-label="Example titles"></div>
+
+      <div class="controls" aria-label="Direction controls">
+        <button id="worse" type="button" aria-label="Worse direction">Worse</button>
+        <button id="skip" type="button" aria-label="Skip this constraint">Skip</button>
+        <button id="better" type="button" aria-label="Better direction">Better</button>
+      </div>
+
+      <div class="signal" id="signal" aria-live="polite"></div>
+      <div class="keys" aria-hidden="true">← worse &nbsp;&nbsp; space skip &nbsp;&nbsp; better →</div>
+
+      <button class="reset" id="reset" type="button">reset direction</button>
+    </section>
+  </main>
+
+  <script src="https://cdn.jsdelivr.net/npm/d3@7.9.0/dist/d3.min.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
